@@ -1,14 +1,46 @@
 import React from "react"
-import Layout from "../components/layout"
+import { graphql } from "gatsby"
+import Cover from "../components/cover/cover"
+import Navbar from "../components/navbar/navbar"
+import "./index.css"
+import Portfolio from "./portfolio"
 
-export default function Home() {
+export default function Home({ data }) {
+  console.log(data)
   return (
-    <Layout>
-      <h1>Hi! I'm building a fake Gatsby site as part of a tutorial!</h1>
-      <p>
-        What do I like to do? Lots of course but definitely enjoy building
-        websites.
-      </p>
-    </Layout>
+    <div>
+      <Cover data={data.coverImg} />
+      <Navbar />
+      <Portfolio data={data.projectData} />
+    </div>
   )
 }
+
+export const query = graphql`
+  query {
+    coverImg: file(relativePath: { eq: "changsha.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 6000) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+
+    projectData: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+          }
+          fields {
+            slug
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`

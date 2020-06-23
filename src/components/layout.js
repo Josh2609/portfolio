@@ -18,7 +18,7 @@ export default function Layout({ children }) {
           <ListLink to="/">Home</ListLink>
           <ListLink to="/about/">About</ListLink>
           <ListLink to="/contact/">Contact</ListLink>
-          <ListLink to="/projects/">Projects</ListLink>
+          <ListLink to="/project/">Projects</ListLink>
         </ul>
       </header>
       {children}
