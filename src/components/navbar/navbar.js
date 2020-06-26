@@ -1,19 +1,21 @@
 import React from "react"
 import { Link } from "gatsby"
 import "./navbar.css"
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
-const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-    <Link to={props.to}>{props.children}</Link>
-  </li>
-)
-
-export default function Navbar() {
+export default function NavBar() {
   return (
-    <div className="navbar">
-      <a href="#home">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-    </div>
+    <Navbar fixed="top" collapseOnSelect bg="dark" variant="dark" expand="lg">
+      <Navbar.Brand to="/">TravelBans.info</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav inline className="ml-auto">
+          <Nav.Link href="#home"><NavItem>Home</NavItem></Nav.Link>
+          <Nav.Link href="#about"><NavItem>About Me</NavItem></Nav.Link>
+          <Nav.Link href="#portfolio"><NavItem>Portfolio</NavItem></Nav.Link>
+          <Nav.Link href="#contact">Contact</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   )
 }

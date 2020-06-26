@@ -1,16 +1,17 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Cover from "../components/cover/cover"
-import Navbar from "../components/navbar/navbar"
+import NavBar from "../components/navbar/navbar"
 import "./index.css"
-import Portfolio from "./portfolio"
+import Portfolio from "../components/portfolio/portfolio"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home({ data }) {
   console.log(data)
   return (
     <div>
       <Cover data={data.coverImg} />
-      <Navbar />
+      <NavBar />
       <Portfolio data={data.projectData} />
     </div>
   )
