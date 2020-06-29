@@ -1,57 +1,39 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
 import "./portfolio.css"
-import { Card, CardDeck } from "react-bootstrap"
+import Img from "gatsby-image"
 
 export default function Portfolio({ data }) {
+  console.log(data)
   return (
-    <div className="wrapper">
-      <CardDeck>
-      {data.edges.map(({ node }) => (
-        <Card key={node.id}  className="mb-2">
-          <Card.Img variant="top" src="https://via.placeholder.com/150" />
-          <Card.Body>
-            <Link to={node.fields.slug} class="stretched-link" />
-            <Card.Title>{node.frontmatter.title} </Card.Title>
-            <Card.Text>{node.excerpt}</Card.Text>
-          </Card.Body>
-        </Card>
-      ))}
-      </CardDeck>
-      <div className="row">
-          <div className=" col-12 col-md-4 col-lg-4 offset-lg-1">
-            <div className="box">
-              <h5>Toolbox</h5>
-              <p>
-                <b>Languages and Frameworks:</b> Javascript, HTML5, CSS3, React,
-                Bootstrap, Node, Express, MongoDB, Rails, Postgres, Jest
-                <br />
-                <b>IDE:</b> Microsoft VS Code
-                <br />
-                <b>VCS:</b> Git/Github
-                <br />
-                <b>PMS:</b> Trello
-                <br />
-                <b>Debugger:</b> Chrome DevTools
-                <br />
-              </p>
-            </div>
+    <div>
+      <section id="projects" className="section projects">
+        <h2 className="text-center">PROJECTS</h2>
+        <div className="section-content">
+          <div className="project-list">
+            {data.edges.map(({ node }) => (
+              <a
+                className="single-card"
+                href={node.fields.slug}
+                key={node.fields.slug}
+              >
+                <div className="card-img">
+                  <Img
+                    title={node.frontmatter.title}
+                    alt="Screenshot of Project"
+                    sizes={node.frontmatter.featuredImage.childImageSharp.sizes}
+                    className="card-img_src center-block"
+                  />
+                </div>
+                <div className="blue-divider" />
+                <div className="card-info">
+                  <h4 className="card-name">{node.frontmatter.title}</h4>
+                  <p>{node.excerpt}</p>
+                </div>
+              </a>
+            ))}
           </div>
-          </div>
-      <div className="container">
-        <h1>Amazing Pandas Eating Things</h1>
-        <h4>{data.totalCount} Posts</h4>
-        {data.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link to={node.fields.slug}>
-              <h3>
-                {node.frontmatter.title} <span>— {node.frontmatter.date}</span>
-              </h3>
-            </Link>
-            <p>{node.excerpt}</p>
-          </div>
-        ))}
-      </div>
+        </div>
+      </section>
     </div>
   )
 }

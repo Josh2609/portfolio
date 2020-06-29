@@ -1,6 +1,7 @@
 ---
 title: "Penny Home - A website for a local damp proofing company"
 date: "2020-06-22"
+featuredImage: "./cover.jpg"
 ---
 
 Website for a local damp proofing company called Penny Home Preservation

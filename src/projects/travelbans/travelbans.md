@@ -1,6 +1,7 @@
 ---
 title: "TravelBans.info - A website for tracking entry restrictions during COVID19"
 date: "2020-06-22"
+featuredImage: "./cover.jpg"
 ---
 
 Pandas are really sweet.

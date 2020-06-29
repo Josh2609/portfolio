@@ -19,7 +19,7 @@ const Cover = ({ data }) => (
     <div className="overlay" />
     <div className="center">
       <h1 className="name">
-        <b>HI, I'M JOSH</b>
+        <b style={{fontFamily:"Work Sans"}}>HI, I'M JOSH</b>
       </h1>
       <p className="greetings">Let's change the world together!</p>
     </div>
