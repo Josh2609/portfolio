@@ -6,6 +6,7 @@ import "./index.css"
 import Portfolio from "../components/portfolio/portfolio"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Container } from "react-bootstrap"
+import CV from "../components/cv-download/cv-download"
 
 export default function Home({ data }) {
   console.log(data)
@@ -15,6 +16,7 @@ export default function Home({ data }) {
       <Container fluid>
         <NavBar />
         <Portfolio data={data.projectData} />
+        <CV />
       </Container>
     </div>
   )
