@@ -21,7 +21,7 @@ const Cover = ({ data }) => (
       <h1 className="name">
         <b style={{fontFamily:"Work Sans"}}>HI, I'M JOSH</b>
       </h1>
-      <p className="greetings">Let's change the world together!</p>
+      <p className="greetings">I'm a etc...</p>
     </div>
   </div>
 );
