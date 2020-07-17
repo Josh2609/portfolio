@@ -2,8 +2,7 @@
 title: "COVID-Update-Bot - A bot to post the DHSC daily update to reddit"
 date: "2020-06-23"
 featuredImage: "./cover.jpg"
-path: "covid-update-bot.md"
-excerpt: "asyaysyays"
+slug: projects/covid-bot
 ---
 
 Do Pandas eat bananas? Check out this short video that shows that yes! pandas do seem to really enjoy bananas!

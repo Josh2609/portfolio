@@ -2,8 +2,7 @@
 title: "joshcorps.com - Personal portfolio"
 date: "2020-06-23"
 featuredImage: "./cover.jpg"
-path: "joshcorps-com"
-excerpt: "asyaysyays"
+slug: projects/joshcorps-com
 ---
 
 Do Pandas eat bananas? Check out this short video that shows that yes! pandas do seem to really enjoy bananas!

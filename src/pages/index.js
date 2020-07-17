@@ -7,7 +7,6 @@ import Portfolio from "../components/portfolio/portfolio"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Container } from "react-bootstrap"
 import CV from "../components/cv-download/cv-download"
-import Testing from "../components/testing"
 
 
 export default function Home({ data }) {
@@ -17,9 +16,8 @@ export default function Home({ data }) {
       <Cover data={data.coverImg} />
       <Container fluid>
         <NavBar />
-        <Portfolio data={data.projectData} pages={data.projectPages} />
+        <Portfolio data={data.projectData}/>
         <CV />
-        <Testing />
       </Container>
     </div>
   )
@@ -58,19 +56,6 @@ export const query = graphql`
           }
           excerpt
         }
-      }
-    }
-    projectPages: paginatedCollectionPage(
-      collection: { name: { eq: "blog-posts" } }
-      index: { eq: 0 }
-    ) {
-      nodes
-      hasNextPage
-      nextPage {
-        id
-      }
-      collection {
-        id
       }
     }
   }
