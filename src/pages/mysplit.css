@@ -6,13 +6,26 @@
     top: 0; /* required */
 }
 
+.flex-container {
+  display: flex;
+  align-items: center; /* Vertical center alignment */
+  justify-content: center; /* Horizontal center alignment */
+}
+
 .nav-header{
-    text-align: center;
-    color: white;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 50pt;
+  font-family: "Cousine";
+  font-style: italic;
 }
 
 @media only screen and (max-width: 767px) {
     .left-nav {
       height: 50vh;
+      position: relative;
     }
   }

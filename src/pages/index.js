@@ -7,6 +7,8 @@ import Portfolio from "../components/portfolio/portfolio"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Container } from "react-bootstrap"
 import CV from "../components/cv-download/cv-download"
+import Testing from "../components/testing"
+
 
 export default function Home({ data }) {
   console.log(data)
@@ -15,8 +17,9 @@ export default function Home({ data }) {
       <Cover data={data.coverImg} />
       <Container fluid>
         <NavBar />
-        <Portfolio data={data.projectData} />
+        <Portfolio data={data.projectData} pages={data.projectPages} />
         <CV />
+        <Testing />
       </Container>
     </div>
   )
@@ -24,7 +27,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query {
-    coverImg: file(relativePath: { eq: "changsha.jpg" }) {
+    coverImg: file(relativePath: { eq: "img2.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 6000) {
           ...GatsbyImageSharpSizes
@@ -55,6 +58,19 @@ export const query = graphql`
           }
           excerpt
         }
+      }
+    }
+    projectPages: paginatedCollectionPage(
+      collection: { name: { eq: "blog-posts" } }
+      index: { eq: 0 }
+    ) {
+      nodes
+      hasNextPage
+      nextPage {
+        id
+      }
+      collection {
+        id
       }
     }
   }

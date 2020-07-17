@@ -1,14 +1,19 @@
-import React from "react"
+import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./mysplit.css"
-import { Container, Row, Col } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 
 export default function Mysplit() {
     return (
         <div>
+
+            
             <Row>
-            <Col md={6} className="bg-dark left-nav">
-                <p className="nav-header">asdyasd</p>
+            <Col md={6} className="bg-dark left-nav ">
+            <div className="nav-header">
+                About
+            </div>
+                <div className="flex-container"></div>
             </Col>
             <Col md={6} className="bg-primary">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo felis, venenatis quis tincidunt sit amet, tincidunt sed neque. Curabitur et dui nisi. Nunc tempor tempus mauris, ut feugiat magna consequat vitae. Phasellus et est at odio feugiat scelerisque sed id purus. Quisque fringilla dictum urna, ac egestas dolor ornare vel. Integer vitae ante convallis, convallis nulla sed, rutrum neque. Praesent id eros eget est euismod fermentum. Aenean et orci fermentum nulla feugiat eleifend. Fusce in orci volutpat, fringilla ipsum dignissim, facilisis velit. Vestibulum in elit quis lacus suscipit maximus id eu risus. Aenean pellentesque id orci a mollis. In nunc turpis, auctor consectetur tempus non, volutpat ut felis. Vestibulum luctus dolor id lacus accumsan scelerisque at a felis. Nullam nec ante non dolor ornare porttitor laoreet vitae metus. Nam vestibulum, urna nec laoreet condimentum, risus ligula sollicitudin justo, consequat luctus risus dui et eros.
