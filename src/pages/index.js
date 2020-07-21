@@ -2,22 +2,21 @@ import React from "react"
 import { graphql } from "gatsby"
 import Cover from "../components/cover/cover"
 import NavBar from "../components/navbar/navbar"
-import "./index.css"
 import Portfolio from "../components/portfolio/portfolio"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Container } from "react-bootstrap"
-import CV from "../components/cv-download/cv-download"
-
+import Contact from "../components/contact/contact"
 
 export default function Home({ data }) {
   console.log(data)
   return (
     <div>
+     
       <Cover data={data.coverImg} />
       <Container fluid>
         <NavBar />
         <Portfolio data={data.projectData}/>
-        <CV />
+        <Contact />
       </Container>
     </div>
   )

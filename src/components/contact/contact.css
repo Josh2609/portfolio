@@ -1,0 +1,10 @@
+.CV {
+  padding: 30px 30px;
+  border-color: red;
+  border-style: solid;
+}
+
+.contact-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

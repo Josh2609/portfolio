@@ -59,10 +59,6 @@
   background-color: #f6f6f6;
 }
 
-.projects > h2 {
-  margin-bottom: 0;
-}
-
 .projects a,
 .projects a:hover {
   color: black;
