@@ -1,6 +1,6 @@
 import React from "react"
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+import Scrollchor from 'react-scrollchor';
 
 export default function NavBar() {
   return (
@@ -9,10 +9,10 @@ export default function NavBar() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <AnchorLink className="nav-link" to="/" title="Home" />
-          <AnchorLink className="nav-link" to="/#about" title="About" />
-          <AnchorLink className="nav-link" to="/#projects" title="Projects" />
-          <AnchorLink className="nav-link" to="/#contacts" title="Contacts" />
+          <NavItem><Scrollchor className="nav-link" to="">Home</Scrollchor></NavItem>
+          <NavItem><Scrollchor className="nav-link" to="#about">About</Scrollchor></NavItem>
+          <NavItem><Scrollchor className="nav-link" to="#projects">Projects</Scrollchor></NavItem>
+          <NavItem><Scrollchor className="nav-link" to="#contacts">Contacts</Scrollchor></NavItem>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
