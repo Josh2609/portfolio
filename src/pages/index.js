@@ -6,6 +6,8 @@ import Portfolio from "../components/portfolio/portfolio"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Container } from "react-bootstrap"
 import Contact from "../components/contact/contact"
+import Footer from "../components/footer"
+import About from "../components/about/about"
 
 export default function Home({ data }) {
   console.log(data)
@@ -15,8 +17,10 @@ export default function Home({ data }) {
       <Cover data={data.coverImg} />
       <Container fluid>
         <NavBar />
+        <About />
         <Portfolio data={data.projectData}/>
         <Contact />
+        <Footer />
       </Container>
     </div>
   )

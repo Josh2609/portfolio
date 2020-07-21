@@ -14,7 +14,7 @@ import {
 import { Container, Row, Col } from "react-bootstrap"
 
 export default function Contact() {
-  const iconColor = "#00C4E3"
+  const iconColor = "#9370db"
   const iconSize = "3x"
   
   return (
