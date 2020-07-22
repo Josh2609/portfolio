@@ -2,6 +2,12 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans");
 @import url("https://fonts.googleapis.com/css?family=Cousine");
 
+
+.main {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 * {
   font-family: "Quattrocento Sans", serif;
 }

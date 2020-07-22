@@ -23,7 +23,7 @@ export default function Portfolio({ data }) {
                     className="card-img_src center-block"
                   />
                 </div>
-                <div className="divider" />
+                <div className="card-divider" />
                 <div className="card-info">
                   <h4 className="card-name">{node.frontmatter.title}</h4>
                   <p>{node.excerpt}</p>

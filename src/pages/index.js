@@ -15,13 +15,20 @@ export default function Home({ data }) {
     <div>
      
       <Cover data={data.coverImg} />
-      <Container fluid>
+      <Container fluid className="main">
         <NavBar />
         <About />
         <Portfolio data={data.projectData}/>
         <Contact />
         <Footer />
       </Container>
+      <button className="btn">
+  <span className="btn__text-static">Static right</span>
+  
+  <div className="btn__text-dynamic">
+    <span className="btn__text-dynamic-inner">Dyna right</span>
+  </div>
+</button>
     </div>
   )
 }

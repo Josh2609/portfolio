@@ -5,6 +5,9 @@ export default function About() {
     <section id="about" className="section footer">
       <div className="text-center section-content">
         <h2>ABOUT ME</h2>
+        <div className="section-content">
+          es
+        </div>
       </div>
     </section>
   )
