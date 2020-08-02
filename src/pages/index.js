@@ -22,20 +22,13 @@ export default function Home({ data }) {
         <Contact />
         <Footer />
       </Container>
-      <button className="btn">
-  <span className="btn__text-static">Static right</span>
-  
-  <div className="btn__text-dynamic">
-    <span className="btn__text-dynamic-inner">Dyna right</span>
-  </div>
-</button>
     </div>
   )
 }
 
 export const query = graphql`
   query {
-    coverImg: file(relativePath: { eq: "img2.jpg" }) {
+    coverImg: file(relativePath: { eq: "bg2.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 6000) {
           ...GatsbyImageSharpSizes

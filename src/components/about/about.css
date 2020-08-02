@@ -1,0 +1,16 @@
+.about-content {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.about-container {
+    padding-top: 15px;
+    background-color: lavenderblush;
+    float: left;
+}
+
+.skills-container {
+    padding-top: 15px;
+    background-color: lightblue;
+}

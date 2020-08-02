@@ -19,9 +19,9 @@ export default function Contact() {
   
   return (
     <section id="contacts" className="section CV">
-      <div className="text-center section-content">
-        <h2>Contact</h2>
-        <Container>
+      <h2 className="text-center">Contact</h2>
+      <div className="section-content">
+        <Container className="text-center">
           <Row>
             <Col className="contact-item" sm={2}>
               <a href="cv.pdf" target="_blank">

@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 
 export default function Portfolio({ data }) {
   return (
-    <div>
       <section id="projects" className="section projects">
         <h2 className="text-center">PROJECTS</h2>
         <div className="section-content">
@@ -33,6 +32,5 @@ export default function Portfolio({ data }) {
           </div>
         </div>
       </section>
-    </div>
   )
 }

@@ -1,14 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
 import "./project.css"
+import NavBar from "../components/navbar/navbar"
+import { Container } from "react-bootstrap"
+import "bootstrap/dist/css/bootstrap.min.css"
 
-export default function BlogPost({ data }) {
+export default function Project({ data }) {
   const post = data.markdownRemark
   return (
-      <div>
+      <Container fluid className="main">
+        <NavBar />
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+      </Container>
   )
 }
 

@@ -1,5 +1,5 @@
 .nav-top {
-  background: linear-gradient(to right, #9370db 50%, #343a40 50%);
+  background: linear-gradient(to right, #9370db 50%, transparent 50%);
   background-size: 200% 100%;
   background-position: left bottom;
   background-position: right bottom;
@@ -7,52 +7,18 @@
 }
 
 .nav-text {
-    color: #ffffff !important;
+    color: #000000 !important;
     transition: all 0.5s ease;
 }
 
 .nav-stext{
-    color: #000000 !important;
+    color: #ffffff !important;
     transition: all 0.5s ease;
 }
 .nav-scroll {
-  background: linear-gradient(to right, #9370db 50%, #343a40 50%);
+  background: linear-gradient(to right, #9370db 50%, transparent 50%);
   background-size: 200% 100%;
   background-position: left bottom;
   transition: all 0.5s ease;
 }
 
-  .btn {
-    position: relative !important;
-    border: 2px solid #222 !important;
-    color: #fff !important;
-    background-color: #222 !important;
-    font-size: 24px !important;
-    overflow: hidden !important;
-
-  }
-  
-  .btn__text-dynamic,
-  .btn__text-dynamic-inner {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    z-index: 2 !important;
-    transition: all ease 5s !important;
-  }
-  .btn__text-dynamic {
-    background-color: #fff !important;
-    color: #222 !important;
-    overflow: hidden !important;
-  }
-  .btn:hover .btn__text-dynamic {
-    transform: translateX(-100%) !important;
-  }
-  .btn:hover .btn__text-dynamic-inner {
-    transform: translateX(100%) !important;
-  }
