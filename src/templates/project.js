@@ -8,11 +8,15 @@ import "bootstrap/dist/css/bootstrap.min.css"
 export default function Project({ data }) {
   const post = data.markdownRemark
   return (
-      <Container fluid className="main">
-        <NavBar />
-        <h1>{post.frontmatter.title}</h1>
+    <Container fluid className="main">
+      <NavBar />
+      <section id="projects" className="section projects">
+        <h2 className="text-center">{post.frontmatter.title}</h2>
+        <div className="section-content">
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Container>
+        </div>
+      </section>
+    </Container>
   )
 }
 

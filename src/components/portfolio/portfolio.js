@@ -1,6 +1,7 @@
 import React from 'react'
 import "./portfolio.css"
 import Img from "gatsby-image"
+import { Link } from 'gatsby';
 
 export default function Portfolio({ data }) {
   return (
@@ -9,9 +10,9 @@ export default function Portfolio({ data }) {
         <div className="section-content">
           <div className="project-list">
             {data.edges.map(({ node }) => (
-              <a
+              <Link 
                 className="single-card"
-                href={node.fields.slug}
+                to={node.fields.slug}
                 key={node.fields.slug}
               >
                 <div className="card-img">
@@ -27,7 +28,7 @@ export default function Portfolio({ data }) {
                   <h4 className="card-name">{node.frontmatter.title}</h4>
                   <p>{node.excerpt}</p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
