@@ -17,8 +17,21 @@ module.exports = {
       },
     },
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1000,
+              quality: 100,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`,
     `gatsby-plugin-slug`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-anchor-links`,

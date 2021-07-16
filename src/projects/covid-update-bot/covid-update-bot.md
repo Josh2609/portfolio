@@ -7,4 +7,4 @@ slug: projects/covid-bot
 
 A bot to post the DHSC daily update to reddit
 
-![Output](output.jpg)
+![Alt text here](./prewrite.jpg)

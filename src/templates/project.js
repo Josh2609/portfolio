@@ -10,7 +10,7 @@ export default function Project({ data }) {
   return (
     <Container fluid className="main">
       <NavBar />
-      <section id="projects" className="section projects">
+      <section id="projects" className="section project">
         <h2 className="text-center">{post.frontmatter.title}</h2>
         <div className="section-content">
         <div dangerouslySetInnerHTML={{ __html: post.html }} />

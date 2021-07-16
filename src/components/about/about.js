@@ -20,6 +20,7 @@ export default function About() {
         <Container>
           <Row>
             <Col md={6} className="about-container">
+            <h2 className="text-center">Introduction</h2>
               <p>
                 Hi, my name is Josh Corps. I'm a full-stack software developer
                 based in the UK. I'm passionate about ...
